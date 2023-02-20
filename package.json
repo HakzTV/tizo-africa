@@ -1,6 +1,9 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=14.18.1"
+  },
   "description": "This is an education app for teaching and learning.",
   "main": "index.js",
   "type": "module",
