@@ -6,9 +6,10 @@ import ejs from 'ejs'
 const router = express.Router()
 
 router.get("/", (req,res, next)=>{
-    res.render("dashboard", {name: req.user.name})
+    res.render("dashboard")
 })
-
+// Getting username
+// , {name: req.user.name}
 router.get("/account", (req, res, next)=>{
     res.render("account")
 })

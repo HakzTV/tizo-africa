@@ -47,7 +47,7 @@ app.use("/dashboard/account/forgot-password", dashboardRoute)
 // // This is to handle messages to the user
 
 // Configurations
-const url = process.env.MONGO
+const url = process.env.MONGO_URL
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true 
