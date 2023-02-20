@@ -1,0 +1,59 @@
+<%- include('partials/header') %> 
+<section class="form" >
+    <div id="container">
+        <div class="user signInBox">
+            <div class="imgBox">
+                <div class="txtbox p-5 text-center">
+                    <h1>Start your education 
+                        Journey with us</h1>
+                        <p>Making learning more interactive and fun for our kids.</p>
+                </div>
+                <div class="imgnow">
+                    <img class="pattern" src="/images/patterns2.png" alt="Random image">
+                </div>
+                
+            </div>
+            <div class="formBx">
+                <form action="/api/auth/signup" method="POST">
+                    <h2 class = "l-200">Sign Up </h2>
+                    <p class="signup"> Don't have an account? <a href="/api/auth/signup" class="swap">Sign Up</a> here </p>
+                    <input type="text" name="firstName" placeholder="Enter your First name" required autofocus>
+                    <input type="text" name="lastName" placeholder="Enter your Last name" required autofocus>
+                    
+                    <input type="email" name="email" placeholder="Email" required autofocus>
+                    <input type="password" name="password" placeholder="Password" required >
+                    <input type="text" name="level" placeholder="Enter your class level" required autofocus>
+                    <input type="submit" >
+                
+                </form>
+                </div>
+        </div>
+        
+    </div>
+</section>
+<!-- <div class="user signUpBox">
+    <div class="formBx">
+        <div class="imgBox">
+            <div class="txtbox">
+                <h1>Start your education 
+                    Journey with us</h1>
+                    <p>Making learning more interactive and fun for our kids.</p>
+            </div>
+            <div class="imgnow">
+                <img class="pattern" src="./images/patterns2.png" alt="Random image">
+            </div>
+            
+        <form>
+            <h2>Create an Account</h2>
+            <input type="text" name="email" placeholder="email">
+            <input type="email" name="" placeholder="Email Address">
+            <input type="password" name="" placeholder=" Create Password">
+            <input type="password" name="" placeholder="Confirm Password">
+            <input type="submit" value="Sign Up" name="">
+            <p class="signup"> Already have an account? <a href="/api/auth/signin" class="swap">Sign In</a> </p>
+        </form>
+        </div>
+        <div class="imgBox">
+            <img src="/images/gastronomic-translation-1.jpg" alt="Random image">
+        </div>
+</div> -->

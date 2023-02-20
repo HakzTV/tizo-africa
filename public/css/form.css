@@ -1,0 +1,138 @@
+.form {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw
+  /* background-color: #5d4954; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px; */
+  overflow: hidden;
+}
+#container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* background: #fff; */
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* utility class */
+
+/* This is to test the new branch */
+#container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#container .user .imgBox {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  /* background: #fff; */
+  transition: 0.5s;
+  background-color: #662000;
+  display: flex;
+
+}
+#container .user .imgBox img {
+  position: absolute;
+  top:200px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.txtbox{
+  color: #fff
+}
+.txtbox h1 {font-family: 'Merriweather', serif;
+  font-weight: bold;
+  }
+.txtbox p{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #F8F8F8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+form h2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  /* color: #fff; */
+}
+form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #662000;
+  outline: solid;
+  border: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  font-weight: 300px;
+}
+input[type="submit"] {
+  /* max-width: 100px; */
+  background: #662000;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  /* color: #fff; */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+form a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+#container .signUpBox .formBx {
+  left: 100%;
+}
+#container .signUpBox .imgBox {
+  left: -100%;
+}
+#container .signUpBox {
+  pointer-events: none;
+}
+#container.active .signUpBox {
+  pointer-events: initial;
+}
+#container.active .signUpBox .formBx {
+  left: 0;
+}
+#container.active .signUpBox .imgBox {
+  left: 0;
+}
