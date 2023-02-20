@@ -108,7 +108,13 @@ h1 {
   text-decoration: none;
   color: red;
 }
-
+.bg-img{
+  background-image: url('/images/about-bg.png');
+  position: relative; 
+  top:-60px;
+  right:0; 
+ 
+}
 /*end features*/
 
 footer {

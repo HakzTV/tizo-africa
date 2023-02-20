@@ -3,9 +3,9 @@ nav{
 }
 .navbar {
     background-color: transparent;
-    padding: 15px 0px 20px 0px;
+    /* padding: 10px 0px 20px 0px; */
     transition: all 0.5s;
-    box-shadow:fv;
+    /* box-shadow:f */
 }
 .log-btn{
     display: inline-block;
