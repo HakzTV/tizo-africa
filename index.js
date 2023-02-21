@@ -10,6 +10,7 @@ import authRoutes from "./routes/auth.js"
 import homeRoute from "./routes/home.js"
 import dashboardRoute from "./routes/dashboard.js"
 const app = express()
+const port = process.env.PORT ||3000
 
 
 
@@ -35,10 +36,16 @@ app.use("/blog", homeRoute)
 app.use("/blog-post", homeRoute)
 app.use("/blog-post2", homeRoute)
 
-
 app.use("/dashboard", dashboardRoute)
 app.use("/dashboard/account", dashboardRoute)
 app.use("/dashboard/account/forgot-password", dashboardRoute)
+// Handling invalid requests
+app.use(function(req, res) {
+    // Invalid request
+          res.render()
+    });
+
+
 
 
 
@@ -67,7 +74,6 @@ const connect = ()=>{
 
 
 // Server opened
-const port = process.env.PORT ||3000
 app.listen(port, ()=>{
     connect()
     console.log("Connected")

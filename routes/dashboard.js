@@ -17,6 +17,7 @@ router.get("/account", (req, res, next)=>{
 router.get("/forgot-password", (req, res, next)=>{
     res.render("forgot-pass")
 })
+
 // router.get("/login", (req, res) =>{
 // res.render("login")
 // })
