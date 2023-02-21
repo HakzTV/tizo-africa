@@ -42,7 +42,7 @@ app.use("/dashboard/account/forgot-password", dashboardRoute)
 // Handling invalid requests
 app.use(function(req, res) {
     // Invalid request
-          res.render()
+          res.render("error-404")
     });
 
 
