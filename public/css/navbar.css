@@ -34,7 +34,7 @@ nav{
     font-weight: bold;
 }
 .navbar-scrolled{
-    background-color: rgba(0,0,0,0.55);
+    background-color: rgba(210,87,40,0.55);
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     color: white
 }

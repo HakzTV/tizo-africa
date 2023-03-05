@@ -25,15 +25,15 @@ const UserSchema = new mongoose.Schema({
         required: true
     },
     img:{
-        data: Buffer,
-        contentType: String
+       type: String
     }, 
-    subscibers: {
+    subscribers: {
         type: Number , 
         default: 0
     },
     subscribedUsers: {
         type: [String],
+        unique: true
 
     }
 },({timestamps: true}))

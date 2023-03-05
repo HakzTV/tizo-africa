@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import User from "../models/User.js"
 import bcrypt from "bcryptjs"
-import { createError } from "../error.js";
+import { createError } from "../middlewares/error.js";
 import jwt from "jsonwebtoken"
 
 // import dotenv from "dotenv"
@@ -21,6 +21,7 @@ export const signup = async (req, res, next)=>{
         next(err)
     }
 }
+
 // sign in logic
 export const signin = async (req, res, next)=>{
     
@@ -33,7 +34,7 @@ export const signin = async (req, res, next)=>{
       const isCorrect =  await bcrypt.compare(req.body.password, user.password)
       if(!isCorrect)return next(createError(400, "Wrong password"))
         // Creating a hash token
-      const token = jwt.sign({id:user._id}, process.env.JWT)
+      const token = jwt.sign({id:user._id}, process.env.JWT,{expiresIn : '1d'})
     //   to seperate the password from the other details using the spread operator
          const {password, ...otherDetails} = user._doc
     //   Sending the token to user

@@ -12,6 +12,57 @@
   }
 }
 
+.device{ 
+  display: grid;
+}
+.device-frame {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  justify-self:center;
+  align-self:center;
+  border: 8px solid hsl(0, 0%,95%);
+  border-radius: 10px;
+  height: 200px;
+  width: 150px;
+  box-shadow:  2px 2px 2px rgba(20,20,20,.1);
+ transform:  perspective(500px)  rotateX(40deg) rotateY(0deg) rotateZ(-20deg);
+  z-index:2;
+  background:pink;
+  overflow: hidden;
+}
+
+.device-base {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  justify-self:center;
+  align-self:center;
+  border: 8px solid hsl(0, 0%,95%);
+  border-radius: 10px;
+  height: 200px;
+  width: 150px;
+  box-shadow: 8px 8px 8px rgba(20,20,20,.05), 2px 2px 2px rgba(20,20,20,.3);
+ transform:  perspective(500px)  rotateX(40deg) rotateY(0deg) rotateZ(-20deg) translateZ(-5px);
+  z-index:1;
+}
+
+
+.screenshot {
+  max-width:100%;
+  animation: scroll 3s infinite alternate;
+  filter: blur(.1px);
+}
+.logo{
+  width: 50px;
+  height: auto;
+}
+@keyframes scroll {
+  0% {
+      transform: translateY(0px);
+  }
+  100% {
+      transform: translateY(-600px);
+  }
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

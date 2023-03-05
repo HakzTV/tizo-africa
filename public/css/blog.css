@@ -10,7 +10,10 @@
     scroll-behavior: smooth;
   }
 }
-
+.bg-custom{
+  background-color: #D25728;
+  
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

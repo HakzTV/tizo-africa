@@ -1,11 +1,13 @@
 import express from 'express';
+import { verifyToken } from '../middlewares/verifyToken.js';
+
 import ejs from 'ejs'
 // import {} from "../controllers/user.js"
 
 // route for users
 const router = express.Router()
 
-router.get("/", (req,res, next)=>{
+router.get("/", verifyToken, (req,res, next)=>{
     res.render("dashboard")
 })
 // Getting username

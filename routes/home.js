@@ -1,14 +1,14 @@
 import express from 'express';
 import ejs from 'ejs'
-import { verifyToken } from '../verifyToken.js';
+import { verifyToken } from '../middlewares/verifyToken.js';
 import { dynamicTitle } from '../title.js';
 // import {} from "../controllers/user.js"
-
+import User from '../models/User.js';
 // route for users
 const router = express.Router()
 
 router.get("/", (req,res, next)=>{
-    res.render("index", dynamicTitle("Tizo Africa | Home Page"))
+    res.render("index")
 })
 
 router.get("/about", (req, res, next)=>{

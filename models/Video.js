@@ -9,19 +9,17 @@ const VideoSchema = new mongoose.Schema({
     },
     title: {
         type: String, 
-        required: true
     },
     description:{
         type: String, 
-        required: true
+       
     }, 
     imgUrl:{
-        type: String, 
-        required: true
+        type: String
     },
     videoUrl: {
         type: String, 
-        required: true
+        required: [true, "You must upload a video"]
     }, 
     views: {
         type: Number,
@@ -30,7 +28,10 @@ const VideoSchema = new mongoose.Schema({
     tags:{
         type: [String], 
         default: []
-    }
+    },
+    cloudinary_id: {
+        type: String
+      }
 },({timestamps: true}))
 
 // Exporting 
